@@ -456,6 +456,7 @@ padding: 0.75rem;
       <th scope="col">P18</th>
       <th scope="col">P19</th>
       <th scope="col">P20</th>
+      <th scope="col">Resultado</th>
     </tr>
   </thead>
   <tbody>
@@ -487,6 +488,11 @@ padding: 0.75rem;
 <td>{{pregunta.T18}}</td>
 <td>{{pregunta.T19}}</td>
 <td>{{pregunta.T20}}</td>
+        {%if pregunta.Resultado >= 10 %}
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        {%else %}
+         <td style="color:green">NO REQUIERE VALORACIÓN CLINICA</td>
+        {%endif%}
     </tr>
 
     {%endfor%}
