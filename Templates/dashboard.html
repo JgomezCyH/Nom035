@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
 <style>
@@ -12,14 +13,34 @@
     background-color: #343a40;
     border-color: #454d55;
 }
+    .prueba {
+   color: #fff;
+    background-color: #343a40;
+    border-color: #454d55;
+    text-align:center;
+    width :100vh;
+}
 .myclass td{
 padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;}
 </style>
 <body>
-
-<table class="table">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Riesgo de Trabajo</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Eventos Traumaticos</a>
+  </li>
+    <!--
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+  </li>
+  -->
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><table class="table">
 
   <thead class="thead-dark">
     <tr>
@@ -100,6 +121,7 @@ padding: 0.75rem;
       <th scope="col">P70</th>
       <th scope="col">P71</th>
       <th scope="col">P72</th>
+       <th scope="col">Condiciones en el Ambiente de trabajo</th>
       <th scope="col">Carga de trabajo</th>
       <th scope="col">Falta de Control Sobre el trabajo</th>
       <th scope="col">Jornada de trabajo</th>
@@ -122,13 +144,14 @@ padding: 0.75rem;
     </tr>
   </thead>
   <tbody>
-  {%for pregunta in respuestas%}
+  {%for pregunta in dataframe%}
     <tr>
       <th scope="row">{{pregunta.Nombre}}</th>
       <td>{{pregunta.Puesto}}</td>
       <td>{{pregunta.Escolaridad}}</td>
       <td>{{pregunta.Edad}}</td>
       <td>{{pregunta.EstadoCivil}}</td>
+
         <td>{{pregunta.p1}}</td>
         <td>{{pregunta.p2}}</td>
 <td>{{pregunta.p3}}</td>
@@ -202,15 +225,280 @@ padding: 0.75rem;
 <td>{{pregunta.p71}}</td>
 <td>{{pregunta.p72}}</td>
 
+      {%if pregunta.d1 < 5%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d1}}</td>
+      {% elif  pregunta.d1 >= 5 and pregunta.d1 < 9  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d1}}</td>
+      {% elif  pregunta.d1 >= 9 and pregunta.d1 < 11  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d1}}</td>
+      {% elif  pregunta.d1 >= 11 and pregunta.d1 < 14  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d1}}</td>
+      {% elif  pregunta.d1 > 14    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d1}}</td>
+      {% endif  %}
+
+       {%if pregunta.d2 < 15%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d2}}</td>
+      {% elif  pregunta.d2 >= 15 and pregunta.d2 < 21  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d2}}</td>
+      {% elif  pregunta.d2 >= 21 and pregunta.d2 < 27  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d2}}</td>
+      {% elif  pregunta.d2 >= 27 and pregunta.d2 < 37  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d2}}</td>
+      {% elif  pregunta.d2 > 37    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d2}}</td>
+      {% endif  %}
 
 
+       {%if pregunta.d3 < 11%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d3}}</td>
+      {% elif  pregunta.d3 >= 11 and pregunta.d3 < 16  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d3}}</td>
+      {% elif  pregunta.d3 >= 16 and pregunta.d3 < 21  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d3}}</td>
+      {% elif  pregunta.d3 >= 21 and pregunta.d3 < 25  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d3}}</td>
+      {% elif  pregunta.d3 > 25   %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d3}}</td>
+      {% endif  %}
+
+         {%if pregunta.d4 < 1%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d4}}</td>
+      {% elif  pregunta.d4 >= 1 and pregunta.d4 < 2  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d4}}</td>
+      {% elif  pregunta.d4 >= 2 and pregunta.d4 < 4  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d4}}</td>
+      {% elif  pregunta.d4 >= 4 and pregunta.d4 < 6  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d4}}</td>
+      {% elif  pregunta.d4 > 6    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d4}}</td>
+      {% endif  %}
+
+          {%if pregunta.d5 < 4%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d5}}</td>
+      {% elif  pregunta.d5 >= 4 and pregunta.d5 < 6  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d5}}</td>
+      {% elif  pregunta.d5 >= 6 and pregunta.d5 < 8  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d5}}</td>
+      {% elif  pregunta.d5 >= 8 and pregunta.d5 < 10  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d5}}</td>
+      {% elif  pregunta.d5 > 10    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d5}}</td>
+      {% endif  %}
+
+        {%if pregunta.d6 < 9%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d6}}</td>
+      {% elif  pregunta.d6 >= 9 and pregunta.d6 < 12  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d6}}</td>
+      {% elif  pregunta.d6 >= 12 and pregunta.d6 < 16  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d6}}</td>
+      {% elif  pregunta.d6 >= 16 and pregunta.d6 < 20  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d6}}</td>
+      {% elif  pregunta.d6 > 20    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d6}}</td>
+      {% endif  %}
+
+           {%if pregunta.d7 < 10 %}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d7}}</td>
+      {% elif  pregunta.d7 >= 10 and pregunta.d7 < 13  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d7}}</td>
+      {% elif  pregunta.d7 >= 13 and pregunta.d7 < 17  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d7}}</td>
+      {% elif  pregunta.d7 >= 17 and pregunta.d7 < 21  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d7}}</td>
+      {% elif  pregunta.d7 > 21    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d7}}</td>
+      {% endif  %}
+
+           {%if pregunta.d8 < 7%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d8}}</td>
+      {% elif  pregunta.d8 >= 7 and pregunta.d8 < 10  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d8}}</td>
+      {% elif  pregunta.d8 >= 10 and pregunta.d8 < 13  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d8}}</td>
+      {% elif  pregunta.d8 >= 13 and pregunta.d8 < 16  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d8}}</td>
+      {% elif  pregunta.d8 > 16   %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d8}}</td>
+      {% endif  %}
+
+               {%if pregunta.d9 < 6%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d9}}</td>
+      {% elif  pregunta.d9 >= 6 and pregunta.d9 < 10  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d9}}</td>
+      {% elif  pregunta.d9 >= 10 and pregunta.d9 < 14  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d9}}</td>
+      {% elif  pregunta.d9 >= 14 and pregunta.d9 < 18  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d9}}</td>
+      {% elif  pregunta.d9 >  18    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d9}}</td>
+      {% endif  %}
+
+      {%if pregunta.d10 < 4 %}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.d10}}</td>
+      {% elif  pregunta.d10 >= 4 and pregunta.d10 < 6  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.d10}}</td>
+      {% elif  pregunta.d10 >= 6 and pregunta.d10 < 8  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.d10}}</td>
+      {% elif  pregunta.d10 >= 8 and pregunta.d10 < 10  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.d10}}</td>
+      {% elif  pregunta.d10 > 10    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.d10}}</td>
+      {% endif  %}
+
+      {%if pregunta.c1 < 5%}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.c1}}</td>
+      {% elif  pregunta.c1 >= 5 and pregunta.c1 < 9  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.c1}}</td>
+      {% elif  pregunta.c1 >= 9 and pregunta.c1 < 11  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.c1}}</td>
+      {% elif  pregunta.c1 >= 11 and pregunta.c1 < 14  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.c1}}</td>
+      {% elif  pregunta.c1 > 14    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.c1}}</td>
+      {% endif  %}
+
+
+       {%if pregunta.c2 < 15 %}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.c2}}</td>
+      {% elif  pregunta.c2 >= 15 and pregunta.c2 < 30  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.c2}}</td>
+      {% elif  pregunta.c2 >= 30 and pregunta.c2 < 45  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.c2}}</td>
+      {% elif  pregunta.c2 >= 45 and pregunta.c2 < 60  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.c2}}</td>
+      {% elif  pregunta.c2 > 60    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.c2}}</td>
+      {% endif  %}
+
+      {%if pregunta.c3 < 5 %}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.c3}}</td>
+      {% elif  pregunta.c3 >= 5 and pregunta.c3 < 7  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.c3}}</td>
+      {% elif  pregunta.c3 >= 7 and pregunta.c3 < 10 %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.c3}}</td>
+      {% elif  pregunta.c3 >= 10 and pregunta.c3 < 13  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.c3}}</td>
+      {% elif  pregunta.c3 > 13    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.c3}}</td>
+      {% endif  %}
+
+ {%if pregunta.c4 < 14 %}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.c4}}</td>
+      {% elif  pregunta.c4 >= 14 and pregunta.c4 < 29  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.c4}}</td>
+      {% elif  pregunta.c4 >= 29 and pregunta.c4 < 42  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.c4}}</td>
+      {% elif  pregunta.c4 >= 42 and pregunta.c4 < 58  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.c4}}</td>
+      {% elif  pregunta.c4 > 58    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.c4}}</td>
+      {% endif  %}
+
+       {%if pregunta.c5 < 14 %}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.c5}}</td>
+      {% elif  pregunta.c5 >= 14 and pregunta.c5 < 29  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.c5}}</td>
+      {% elif  pregunta.c5 >= 29 and pregunta.c5 < 42  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.c5}}</td>
+      {% elif  pregunta.c5 >= 42 and pregunta.c5 < 58  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">{{pregunta.c5}}</td>
+      {% elif  pregunta.c5 > 58    %}
+          <td style="background-color:red;color:white;text-align:center;">{{pregunta.c5}}</td>
+      {% endif  %}
+
+      <td>{{pregunta.Total}}</td>
+       {%if pregunta.Total < 50 %}
+          <td style="background-color:#9BE5F7;color:black;text-align:center;">Nulo o Despreciable</td>
+      {% elif  pregunta.Total >= 50 and pregunta.Total < 75  %}
+          <td style="background-color:#6BF56E;color:black;text-align:center;">Bajo</td>
+      {% elif  pregunta.Total >= 75 and pregunta.Total < 99  %}
+          <td style="background-color:#FFFF00;color:black;text-align:center;">Medio</td>
+      {% elif  pregunta.Total >= 99 and pregunta.Total < 140  %}
+          <td style="background-color:#FFC000;color:black;text-align:center;">Alto</td>
+      {% elif  pregunta.Total > 140   %}
+          <td style="background-color:red;color:white;text-align:center;">Muy Alto</td>
+      {% endif  %}
     </tr>
 
-    {%endfor%}e
+    {%endfor%}
+  </tbody>
+
+
+</table></div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <table class="table">
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Puesto</th>
+      <th scope="col">Nivel de Estudios</th>
+      <th scope="col">Edad</th>
+      <th scope="col">EstadoCivil</th>
+      <th scope="col">P1</th>
+      <th scope="col">P2</th>
+      <th scope="col">P3</th>
+      <th scope="col">P4</th>
+      <th scope="col">P5</th>
+      <th scope="col">P6</th>
+      <th scope="col">P7</th>
+      <th scope="col">P8</th>
+      <th scope="col">P9</th>
+      <th scope="col">P10</th>
+      <th scope="col">P11</th>
+      <th scope="col">P12</th>
+      <th scope="col">P13</th>
+      <th scope="col">P14</th>
+      <th scope="col">P15</th>
+      <th scope="col">P16</th>
+      <th scope="col">P17</th>
+      <th scope="col">P18</th>
+      <th scope="col">P19</th>
+      <th scope="col">P20</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for pregunta in dataframe%}
+    <tr>
+      <th scope="row">{{pregunta.Nombre}}</th>
+      <td>{{pregunta.Puesto}}</td>
+      <td>{{pregunta.Escolaridad}}</td>
+      <td>{{pregunta.Edad}}</td>
+      <td>{{pregunta.EstadoCivil}}</td>
+
+        <td>{{pregunta.T1}}</td>
+        <td>{{pregunta.T2}}</td>
+<td>{{pregunta.T3}}</td>
+<td>{{pregunta.T4}}</td>
+<td>{{pregunta.T5}}</td>
+<td>{{pregunta.T6}}</td>
+<td>{{pregunta.T7}}</td>
+<td>{{pregunta.T8}}</td>
+<td>{{pregunta.T9}}</td>
+<td>{{pregunta.T10}}</td>
+<td>{{pregunta.T11}}</td>
+<td>{{pregunta.T12}}</td>
+<td>{{pregunta.T13}}</td>
+<td>{{pregunta.T14}}</td>
+<td>{{pregunta.T15}}</td>
+<td>{{pregunta.T16}}</td>
+<td>{{pregunta.T17}}</td>
+<td>{{pregunta.T18}}</td>
+<td>{{pregunta.T19}}</td>
+<td>{{pregunta.T20}}</td>
+    </tr>
+
+    {%endfor%}
   </tbody>
 
 
 </table>
+  </div>
+    <!--
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">asdads</div>
+  -->
+</div>
 
 
 </body>
