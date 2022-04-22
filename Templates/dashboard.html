@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Title</title>
+</head>
+<style>
+    .myclass thead tr {
+   color: #fff;
+    background-color: #343a40;
+    border-color: #454d55;
+}
+.myclass td{
+padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;}
+</style>
+<body>
+
+<table class="table">
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Puesto</th>
+      <th scope="col">Nivel de Estudios</th>
+      <th scope="col">Edad</th>
+      <th scope="col">EstadoCivil</th>
+      <th scope="col">P1</th>
+      <th scope="col">P2</th>
+      <th scope="col">P3</th>
+      <th scope="col">P4</th>
+      <th scope="col">P5</th>
+      <th scope="col">P6</th>
+      <th scope="col">P7</th>
+      <th scope="col">P8</th>
+      <th scope="col">P9</th>
+      <th scope="col">P10</th>
+      <th scope="col">P11</th>
+      <th scope="col">P12</th>
+      <th scope="col">P13</th>
+      <th scope="col">P14</th>
+      <th scope="col">P15</th>
+      <th scope="col">P16</th>
+      <th scope="col">P17</th>
+      <th scope="col">P18</th>
+      <th scope="col">P19</th>
+      <th scope="col">P20</th>
+      <th scope="col">P21</th>
+      <th scope="col">P22</th>
+      <th scope="col">P23</th>
+      <th scope="col">P24</th>
+      <th scope="col">P25</th>
+      <th scope="col">P26</th>
+      <th scope="col">P27</th>
+      <th scope="col">P28</th>
+      <th scope="col">P29</th>
+      <th scope="col">P30</th>
+      <th scope="col">P31</th>
+      <th scope="col">P32</th>
+      <th scope="col">P33</th>
+      <th scope="col">P34</th>
+      <th scope="col">P35</th>
+      <th scope="col">P36</th>
+      <th scope="col">P37</th>
+      <th scope="col">P38</th>
+      <th scope="col">P39</th>
+      <th scope="col">P40</th>
+      <th scope="col">P41</th>
+      <th scope="col">P42</th>
+      <th scope="col">P43</th>
+      <th scope="col">P44</th>
+      <th scope="col">P45</th>
+      <th scope="col">P46</th>
+      <th scope="col">P47</th>
+      <th scope="col">P48</th>
+      <th scope="col">P49</th>
+      <th scope="col">P50</th>
+      <th scope="col">P51</th>
+      <th scope="col">P52</th>
+      <th scope="col">P53</th>
+      <th scope="col">P54</th>
+      <th scope="col">P55</th>
+      <th scope="col">P56</th>
+      <th scope="col">P57</th>
+      <th scope="col">P58</th>
+      <th scope="col">P59</th>
+      <th scope="col">P60</th>
+      <th scope="col">P61</th>
+      <th scope="col">P62</th>
+      <th scope="col">P63</th>
+      <th scope="col">P64</th>
+      <th scope="col">P65</th>
+      <th scope="col">P66</th>
+      <th scope="col">P67</th>
+      <th scope="col">P68</th>
+      <th scope="col">P69</th>
+      <th scope="col">P70</th>
+      <th scope="col">P71</th>
+      <th scope="col">P72</th>
+      <th scope="col">Carga de trabajo</th>
+      <th scope="col">Falta de Control Sobre el trabajo</th>
+      <th scope="col">Jornada de trabajo</th>
+      <th scope="col">Interferencia en la relación trabajo -familia</th>
+      <th scope="col">Liderazgo</th>
+      <th scope="col">Relaciones de trabajo</th>
+      <th scope="col">Violencia</th>
+      <th scope="col">Reconocimiento del desempeño</th>
+      <th scope="col">Insuficiente sentido de Pertenencia o Inestabilidad</th>
+      <th scope="col">Ambiente de trabajo</th>
+      <th scope="col">Factores propios de la actividad</th>
+      <th scope="col">Organización del tiempo del trabajo</th>
+      <th scope="col">Liderazgo y Relaciones de trabajo</th>
+      <th scope="col">Entorno Organizacional</th>
+      <th scope="col">Calificación Final del cuestionario</th>
+      <th scope="col">Resultado Final</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+  {%for pregunta in respuestas%}
+    <tr>
+      <th scope="row">{{pregunta.Nombre}}</th>
+      <td>{{pregunta.Puesto}}</td>
+      <td>{{pregunta.Escolaridad}}</td>
+      <td>{{pregunta.Edad}}</td>
+      <td>{{pregunta.EstadoCivil}}</td>
+        <td>{{pregunta.p1}}</td>
+        <td>{{pregunta.p2}}</td>
+<td>{{pregunta.p3}}</td>
+<td>{{pregunta.p4}}</td>
+<td>{{pregunta.p5}}</td>
+<td>{{pregunta.p6}}</td>
+<td>{{pregunta.p7}}</td>
+<td>{{pregunta.p8}}</td>
+<td>{{pregunta.p9}}</td>
+<td>{{pregunta.p10}}</td>
+<td>{{pregunta.p11}}</td>
+<td>{{pregunta.p12}}</td>
+<td>{{pregunta.p13}}</td>
+<td>{{pregunta.p14}}</td>
+<td>{{pregunta.p15}}</td>
+<td>{{pregunta.p16}}</td>
+<td>{{pregunta.p17}}</td>
+<td>{{pregunta.p18}}</td>
+<td>{{pregunta.p19}}</td>
+<td>{{pregunta.p20}}</td>
+<td>{{pregunta.p21}}</td>
+<td>{{pregunta.p22}}</td>
+<td>{{pregunta.p23}}</td>
+<td>{{pregunta.p24}}</td>
+<td>{{pregunta.p25}}</td>
+<td>{{pregunta.p26}}</td>
+<td>{{pregunta.p27}}</td>
+<td>{{pregunta.p28}}</td>
+<td>{{pregunta.p29}}</td>
+<td>{{pregunta.p30}}</td>
+<td>{{pregunta.p31}}</td>
+<td>{{pregunta.p32}}</td>
+<td>{{pregunta.p33}}</td>
+<td>{{pregunta.p34}}</td>
+<td>{{pregunta.p35}}</td>
+<td>{{pregunta.p36}}</td>
+<td>{{pregunta.p37}}</td>
+<td>{{pregunta.p38}}</td>
+<td>{{pregunta.p39}}</td>
+<td>{{pregunta.p40}}</td>
+<td>{{pregunta.p41}}</td>
+<td>{{pregunta.p42}}</td>
+<td>{{pregunta.p43}}</td>
+<td>{{pregunta.p44}}</td>
+<td>{{pregunta.p45}}</td>
+<td>{{pregunta.p46}}</td>
+<td>{{pregunta.p47}}</td>
+<td>{{pregunta.p48}}</td>
+<td>{{pregunta.p49}}</td>
+<td>{{pregunta.p50}}</td>
+<td>{{pregunta.p51}}</td>
+<td>{{pregunta.p52}}</td>
+<td>{{pregunta.p53}}</td>
+<td>{{pregunta.p54}}</td>
+<td>{{pregunta.p55}}</td>
+<td>{{pregunta.p56}}</td>
+<td>{{pregunta.p57}}</td>
+<td>{{pregunta.p58}}</td>
+<td>{{pregunta.p59}}</td>
+<td>{{pregunta.p60}}</td>
+<td>{{pregunta.p61}}</td>
+<td>{{pregunta.p62}}</td>
+<td>{{pregunta.p63}}</td>
+<td>{{pregunta.p64}}</td>
+<td>{{pregunta.p65}}</td>
+<td>{{pregunta.p66}}</td>
+<td>{{pregunta.p67}}</td>
+<td>{{pregunta.p68}}</td>
+<td>{{pregunta.p69}}</td>
+<td>{{pregunta.p70}}</td>
+<td>{{pregunta.p71}}</td>
+<td>{{pregunta.p72}}</td>
+
+
+
+    </tr>
+
+    {%endfor%}e
+  </tbody>
+
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,2912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta Nom035 Grupo CyH</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container my-1">
+    <form action="/fin/" method="post" >
+        {% csrf_token %}
+   <section >
+  <div class="row">
+    <div class="col">
+        <label for="Name">Nombre Completo</label>
+      <input id="Name" name="Nombre" type="text" class="form-control" placeholder="Nombre Completo" required>
+    </div>
+    <div class="col">
+          <label for="EstCiv">Estado Civil</label>
+       <select class="form-control" name="EstadoCivil" id="EstCiv" required>
+      <option value="CASADO">CASADO</option>
+      <option value="DIVORCIADO">DIVORCIADO</option>
+      <option value="SEPARADO">SEPARADO</option>
+      <option value="SOLTERO" selected>SOLTERO</option>
+      <option value="UNIÓN LIBRE">UNIÓN LIBRE</option>
+      <option value="VIUDO">VIUDO</option>
+    </select>
+    </div>
+    <div class="col">
+        <label for="Edad">Edad</label>
+      <input id="Edad" name="Edad" type="number" class="form-control" placeholder="Edad" required>
+    </div>
+  </div>
+       <div class="row">
+            <div class="col">
+        <label for="puesto">Puesto</label>
+      <input id="puesto" name="Puesto" type="text" class="form-control" placeholder="Puesto" required>
+    </div>
+               <div class="col">
+        <label for="estudios">Nivel de Estudios</label>
+      <input id="estudios" name="Escolaridad" type="text" class="form-control" placeholder="Nivel de Estudios" required>
+    </div>
+       </div>
+
+     </section>
+         <hr>
+   <section id="section1">
+       <label><strong>CUESTIONARIO PARA IDENTIFICAR A LOS TRABAJADORES QUE FUERON SUJETOS A ACONTECIMIENTOS TRAUMÁTICOS SEVEROS</strong></label>
+        <label><b>I.- Acontecimiento traumático severo</b></label>
+
+        <label>
+            ¿Ha presenciado o sufrido alguna vez, durante o con motivo de su trabajo actual algún acontecimiento como los siguientes:
+        </label>
+        <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-7 col-xl-8">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Si
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             No
+         </label>
+            </div>
+
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>Accidente que tenga como consecuencia la muerte, la pérdida de un miembro o una lesión grave</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T1" value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T2"  value="0">
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>Asaltos</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" required name="T2" value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T2"  value="0" >
+
+            </div>
+    </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>Actos violentos que derivaron en lesiones graves</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" required name="T3" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio"  name="T3"  value="0" >
+
+            </div>
+    </div>
+          <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>Secuestro</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" required name="T4" value="1" >
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T4"  value="0">
+
+            </div>
+    </div>
+         <div class="row border-bottom border-dark">
+         <div class="col-8">
+        <label>Amenazas</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" required  name="T5" value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T5"  value="0" >
+
+            </div>
+    </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>Cualquier otro que ponga en riesgo su vida o salud, y/o la de otras personas</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" required name="T6" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T6"  value="0">
+
+            </div>
+    </div>
+
+
+
+        </section>
+ <hr>
+        <br>
+           <!--  <    <button id="boton" class="btn btn-primary" type="button">Siguiente</button>-->
+
+        <section id="section2">
+               <label><b>II.- Recuerdos persistentes sobre el acontecimiento (durante el último mes):</b></label>
+        <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-7 col-xl-8">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Si
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             No
+         </label>
+            </div>
+
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha tenido recuerdos recurrentes sobre el acontecimiento que le provocan malestares?</label>
+
+    </div>
+
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T7" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T7"  value="0" >
+
+            </div>
+          </div>
+
+            <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha tenido sueños de carácter recurrente sobre el acontecimiento, que le producen malestar?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T8" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T8"  value="0" >
+
+            </div>
+          </div>
+        </section>
+       <!--  <button class="btn btn-primary" type="button" onclick="mostrarSeccion3()">Siguiente</button> -->
+        <hr>
+        <br>
+         <section id="section3">
+               <label><b> III.- Esfuerzo por evitar circunstancias parecidas o asociadas al acontecimiento (durante el último mes):</b></label>
+<div class="row border-bottom border-dark ">
+
+        <div class="col-sm-7 col-xl-8">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Si
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             No
+         </label>
+            </div>
+
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Se ha esforzado por evitar todo tipo de sentimientos, conversaciones o situaciones que le puedan recordar el acontecimiento?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T9" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T9"  value="0" >
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Se ha esforzado por evitar todo tipo de actividades, lugares o personas que motivan recuerdos del acontecimiento?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T10" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T10"  value="0">
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha tenido dificultad para recordar alguna parte importante del evento?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T11" value="1" >
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T11"  value="0">
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha disminuido su interés en sus actividades cotidianas?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="12" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="12"  value="0" >
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Se ha sentido usted alejado o distante de los demás?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T13" value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T13"  value="0">
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha notado que tiene dificultad para expresar sus sentimientos?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T14" value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T14"  value="0" >
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha tenido la impresión de que su vida se va a acortar, que va a morir antes que otras personas o que tiene un futuro limitado?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T15" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T15"  value="0">
+
+            </div>
+          </div>
+         </section>
+       <hr>
+        <br>
+          <section id="section4">
+               <label><b>IV En caso de haber contestado que sí tuvo algún evento relativo a la sección I, entonces responda si (durante el último mes):</b></label>
+                <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-7 col-xl-8">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Si
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             No
+         </label>
+            </div>
+
+          </div>
+                  <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha tenido usted dificultades para dormir?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T16" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T16"  value="0" >
+
+            </div>
+          </div>
+                  <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha estado particularmente irritable o le han dado arranques de coraje?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T17" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T17"  value="0" >
+            </div>
+          </div>
+                  <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha tenido dificultad para concentrarse?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T18" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T18"  value="0">
+
+            </div>
+          </div>
+                  <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Ha estado nervioso o constantemente en alerta?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T19" value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T19"  value="0">
+            </div>
+          </div>
+                  <div class="row border-bottom border-dark">
+        <div class="col-8">
+        <label>¿Se ha sobresaltado fácilmente por cualquier cosa?</label>
+    </div>
+
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="T20" value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="T20"  value="0" >
+
+            </div>
+          </div>
+
+
+
+          </section>
+        <hr>
+        <br>
+
+        <section>
+            <label>
+             <b>CUESTIONARIO PARA IDENTIFICAR LOS FACTORES DE RIESGO PSICOSOCIAL Y EVALUAR EL ENTORNO ORGANIZACIONAL EN LOS CENTROS DE TRABAJO</b>
+            </label>
+            <label>
+               <b><i>  I.-Para responder las preguntas siguientes considere las condiciones ambientales de su centro de trabajo.</i></b>
+            </label>
+             <div class="row border-bottom border-dark">
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>1.- El espacio donde trabajo me permite realizar mis actividades de manera segura e higiénica</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p1" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p1"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p1"  value="2">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p1"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p1"  value="4" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>2.- Mi trabajo requiere hacer mucho esfuerzo físico</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p2" value="4" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p2"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p2"  value="2">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p2"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p2"  value="0">
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>3.-Me preocupa sufrir un accidente en mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p3" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p3"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p3"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p3"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p3"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>4.- Se que en mi trabajo se aplican las normas de seguridad y salud en el trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p4" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p4"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p4"  value="2">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p4"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p4"  value="4">
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>5.-Las actividades que realizo son consideradas peligrosas</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p5" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p5"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p5"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p5"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p5"  value="0" >
+
+            </div>
+          </div>
+        </section>
+ <hr>
+        <br>
+         <section>
+
+            <label>
+               <b><i>  II.-Para responder a las preguntas siguientes piense en la cantidad y ritmo de trabajo que tiene.</i></b>
+            </label>
+
+             <div class="row border-bottom border-dark ">
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>6.- Por la cantidad de trabajo me requiere tiempo adicional a mi turno</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p6" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p6"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p6"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p6"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p6"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>7.- Por la cantidad de trabajo que tengo me permite tomar descansos intermedios </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p7" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p7"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p7"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p7"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p7"  value="0" >
+
+            </div>
+          </div>
+               <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>8.- Considero que es necesario mantener un ritmo de trabajo constante </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p8" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p8"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p8"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p8"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p8"  value="0" >
+
+            </div>
+          </div>
+
+         </section>
+         <hr>
+        <br>
+  <section>
+
+            <label>
+               <b><i>  III.-Las preguntas siguientes están relacionadas con el esfuerzo mental que le exige su trabajo.</i></b>
+            </label>
+             <div class="row border-bottom border-dark ">
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+       <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>9.- Mi trabajo requiere mucha concentración</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p9" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p9"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p9"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p9"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p9"  value="0" >
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>10.- Mi trabajo requiere que memorice mucha información</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p10" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p10"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p10"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p10"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p10"  value="0" >
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>11.- En mi trabajo tomo decisiones difíciles muy rápido
+</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p11" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p11"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p11"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p11"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p11"  value="0" >
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>12.- Mi trabajo requiere que atienda varios asuntos al mismo tiempo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p12" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p12"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p12"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p12"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p12"  value="0" >
+
+            </div>
+          </div>
+        </section>
+        <hr>
+        <br>
+        <section>
+
+            <label>
+               <b><i>  IV.-Las preguntas siguientes están relacionadas con las actividades que realiza en su trabajo y las responsabilidades que tiene.</i></b>
+            </label>
+             <div class="row border-bottom border-dark ">
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>13.- En mi trabajo soy responsable de cosas de mucho valor</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p13" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p13"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p13"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p13"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p13"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>14.- Respondo ante mi jefe por los resultados de toda mi área de trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p14" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p14"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p14"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p14"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p14"  value="0" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>15.- En el trabajo me dan órdenes contradictorias</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p15" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p15"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p15"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p15"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p15"  value="0" >
+
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>16.- Considero que en mi trabajo me piden hacer cosas innecesarias disitintas a mis actividades</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p16" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p16"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p16"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p16"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p16"  value="0" >
+
+
+            </div>
+          </div>
+        </section>
+          <hr>
+        <br>
+            <section>
+
+            <label>
+               <b><i>  V.-Las preguntas siguientes están relacionadas con su jornada de trabajo.</i></b>
+            </label>
+            <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>17.- Trabajo jornadas adicionales más de tres veces a la semana</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p17" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p17"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p17"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p17"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p17"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>18.- Mi trabajo me exige laborar en días de descanso, festivos o fines de semana
+</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p18" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p18"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p18"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p18"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p18"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>19.- Considero que el tiempo en el trabajo es justo y suficiente para complementar mis actividades laborales y familiares
+</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p19" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p19"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p19"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p19"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p19"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>20.- Debo atender asuntos de mi vida privada durante mi jornada de trabajo
+</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p20" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p20"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p20"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p20"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p20"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>21.-Pienso en las actividades familiares o personales cuando estoy en mi trabajo
+</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p21" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p21"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p21"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p21"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p21"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>22.-Pienso que mis responsabilidades familiares afectan mi trabajo
+</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p22" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p22"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p22"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p22"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p22"  value="0" >
+
+            </div>
+          </div>
+            </section>
+         <section>
+
+            <label>
+               <b><i>  VI.-Las preguntas siguientes están relacionadas con las decisiones que puede tomar en su trabajo.</i></b>
+            </label>
+            <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>23.- He desarrollado nuevas habilidades</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p23" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p23"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p23"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p23"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p23"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>24.- En mi trabajo puedo aspirar a un mejor puesto</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p24" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p24"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p24"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p24"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p24"  value="4" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>25.- Durante mi jornada de trabajo puedo tomar pausas cuando las necesito</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p25" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p25"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p25"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p25"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p25"  value="4" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>26.- Trabajo bajo esquemas de productividad</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p26" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p26"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p26"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p26"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p26"  value="4" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>27.- Tengo establecida la velocidad a la que realizo mis actividades en mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p27" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p27"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p27"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p27"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p27"  value="4" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>28.- Las actividades que realizo en mi trabajo cumplen con niveles de productividad</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p28" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p28"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p28"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p28"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p28"  value="4" >
+
+            </div>
+          </div>
+
+            </section>
+        <hr>
+        <br>
+        <section>
+
+            <label>
+               <b><i>  VII.-Las preguntas siguientes están relacionadas con cualquier tipo de cambio que ocurra en su trabajo (considere los últimos cambios realizados).</i></b>
+            </label>
+            <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>29.- Veo complicado llevar a cabo mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p29" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p29"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p29"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p29"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p29"  value="0" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>30.- Cuando se presentan cambios en mi trabajo me es posible apreciarlos </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p30" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p30"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p30"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p30"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p30"  value="4" >
+
+            </div>
+          </div>
+        </section>
+<hr>
+        <br>
+        <section>
+
+            <label>
+               <b><i>  VIII.- Las preguntas siguientes están relacionadas con la capacitación e información que se le proporciona sobre su trabajo.</i></b>
+            </label>
+            <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>31.- Me informan con claridad cuáles son mis funciones</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p31" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p31"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p31"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p31"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p31"  value="4" >
+
+            </div>
+          </div>
+         <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>32.- Me explican claramente los resultados que debo obtener en mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p32" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p32"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p32"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p32"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p32"  value="4" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>33.- Me explican claramente los objetivos de mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p33" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p33"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p33"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p33"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p33"  value="4" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>34.- Me informan con quién puedo resolver problemas o asuntos de trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p34" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p34"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p34"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p34"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p34"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>35.- Me permiten asistir a capacitaciones relacionadas con mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p35" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p35"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p35"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p35"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p35"  value="4" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>36.- Recibo capacitación en mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p36" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p36"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p36"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p36"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p36"  value="4" >
+
+            </div>
+          </div>
+        </section>
+
+
+         <hr>
+        <br>
+        <section>
+
+            <label>
+               <b><i>  IX.- Las preguntas siguientes están relacionadas con la capacitación e información que se le proporciona sobre su trabajo.</i></b>
+            </label>
+            <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>37.- Mi jefe ayuda a organizar mejor el trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p37" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p37"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p37"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p37"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p37"  value="4" >
+
+            </div>
+          </div>
+               <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>38.-Mi jefe tiene comunicación constante conmigo respecto de las actividades a realizar </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p38" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p38"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p38"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p38"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p38"  value="4" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>39.- Mi jefe me comunica a tiempo la información relacionada con el trabajo </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p39" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p39"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p39"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p39"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p39"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>40.- La orientación que me da mi jefe me ayuda a realizar mejor mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p40" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p40"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p40"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p40"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p40"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>41.- Mi jefe ayuda a solucionar los problemas que se presentan en el trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p41" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p41"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p41"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p41"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p41"  value="4" >
+
+            </div>
+          </div>
+        </section>
+         <hr>
+        <br>
+         <section>
+
+            <label>
+               <b><i>  X.-Las preguntas siguientes se refieren a las relaciones con sus compañeros.	</i></b>
+            </label>
+            <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>42.- Puedo confiar en mis compañeros de trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p42" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p42"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p42"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p42"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p42"  value="4" >
+
+            </div>
+          </div>
+               <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>43.- Entre compañeros solucionamos los problemas de trabajo de forma respetuosa</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p43" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p43"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p43"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p43"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p43"  value="4" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>44.-En mi trabajo me hacen sentir parte del grupo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p44" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p44"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p44"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p44"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p44"  value="4" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>45.-Cuando tenemos que realizar trabajo de equipo los compañeros colaboran</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p45" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p45"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p45"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p45"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p45"  value="4" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>46.-Mis compañeros de trabajo me ayudan cuando tengo dificultades</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p46" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p46"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p46"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p46"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p46"  value="4" >
+
+            </div>
+          </div>
+         </section>
+            <hr>
+        <br>
+        <section>
+
+            <label>
+               <b><i>  XI.-Las preguntas siguientes están relacionadas con la información que recibe sobre su rendimiento en el trabajo, el reconocimiento, el sentido de pertenencia y la estabilidad que le ofrece su trabajo.</i></b>
+            </label>
+            <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>47.- Me informan sobre lo que hago bien en mi trabajo</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p47" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p47"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p47"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p47"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p47"  value="4" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>48.- La forma como evalúan mi trabajo en mi centro de trabajo me ayuda a mejorar mi desempeño</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p48" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p48"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p48"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p48"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p48"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>49.- En mi centro de trabajo me pagan a tiempo mi salario</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p49" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p49"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p49"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p49"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p49"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>50.- El pago que recibo es el acordado en la relacion de trabajo </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p50" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p50"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p50"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p50"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p50"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>51.-Si obtengo los resultados esperados en mi trabajo me recompensan o reconocen </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p51" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p51"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p51"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p51"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p51"  value="4" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>52.- Las personas que tienen mas experiencia en el trabajo pueden crecer laboralmente </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p52" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p52"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p52"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p52"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p52"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>53.- Considero que mi trabajo es estable </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p53" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p53"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p53"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p53"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p53"  value="4" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>54.- En mi trabajo existen ascensos para el personal  </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p54" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p54"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p54"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p54"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p54"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>55.- Siento orgullo de laborar en este centro de trabajo  </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p55" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p55"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p55"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p55"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p55"  value="4" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>56.- Me siento comprometido con mi trabajo  </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p56" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p56"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p56"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p56"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p56"  value="4" >
+
+            </div>
+          </div>
+        </section>
+         <hr>
+        <br>
+          <section>
+
+            <label>
+               <b><i>  XII.-Las preguntas siguientes están relacionadas con actos de violencia laboral (malos tratos, acoso, hostigamiento, acoso psicológico).</i></b>
+            </label>
+              <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>57.- En mi trabajo puedo expresarme libremente sin interrupciones</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p57" value="0">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p57"  value="1">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p57"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p57"  value="3" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p57"  value="4" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>58.- Recibo retroalimentación constantes a mi persona y/o trabajo  </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p58" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p58"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p58"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p58"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p58"  value="0" >
+
+            </div>
+          </div>
+               <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>59.- Realizo burlas, calumnias, difamaciones, humillaciones o ridiculizaciones  </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p59" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p59"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p59"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p59"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p59"  value="0" >
+
+            </div>
+          </div>
+               <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>60.- Ignoro la presencia o excluyo de las reuniones de trabajo y en la toma de decisiones a mis compañeros</label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p60" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p60"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p60"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p60"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p60"  value="0" >
+
+            </div>
+          </div>
+                <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>61.- Manipulo las situaciones de trabajo para evitar cumplir con los objetivos </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p61" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p61"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p61"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p61"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p61"  value="0" >
+
+            </div>
+          </div>
+               <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>62.- Se ignoran mis éxitos laborales y se atribuyen a otros trabajadores </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p62" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p62"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p62"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p62"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p62"  value="0" >
+
+            </div>
+          </div>
+              <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>63.- En el centro de trabajo se generan las oportunidades para obtener ascenso o mejora en mi trabajo </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p63" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p63"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p63"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p63"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p63"  value="0" >
+
+            </div>
+          </div>
+               <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>64.- He propiciado actos de violencia en mi centro de trabajo </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input" required type="radio" name="p64" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p64"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p64"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p64"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p64"  value="0" >
+
+            </div>
+          </div>
+          </section>
+          <hr>
+        <br>
+
+
+           <section>
+               <label><b>En mi trabajo debo brindar servicio a clientes o usuarios</b></label>
+            <label>
+               <b><i>  Si su respuesta fue "SÍ", responda las preguntas siguientes. Si su respuesta fue "NO" pase a las preguntas de la sección siguiente.</i></b>
+            </label>
+              <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+               <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>65.- Atiendo clientes o usuarios muy enojados </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input"  type="radio" name="p65" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p65"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p65"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p65"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p65"  value="0" >
+
+            </div>
+          </div>
+                 <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>66.- Mi trabajo me exige atender personas muy necesitadas de ayuda o enfermas </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input"  type="radio" name="p66" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p66"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p66"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p66"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p66"  value="0" >
+
+            </div>
+          </div>
+                <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>67.-Para hacer mi trabajo debo demostrar sentimientos distintos a los míos </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input"  type="radio" name="p67" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p67"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p67"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p67"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p67"  value="0" >
+
+            </div>
+          </div>
+                <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>68.- Mi trabajo me exige atender situaciones de violencia </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input"  type="radio" name="p68" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p68"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p68"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p68"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p68"  value="0" >
+
+            </div>
+          </div>
+
+           </section>
+            <hr>
+        <br>
+        <section>
+               <label><b>Soy jefe de otros trabajadores:</b></label>
+            <label>
+               <b><i>  Si su respuesta fue "SÍ", responda las preguntas siguientes. Si su respuesta fue "NO" pase a las preguntas de la sección siguiente.</i></b>
+            </label>
+               <label>
+               <b><i>Las preguntas siguientes están relacionadas con las actitudes de las personas que supervisa.</i></b>
+            </label>
+              <div class="row border-bottom border-dark ">
+
+        <div class="col-sm-5 col-xl-6">
+        <label></label>
+    </div>
+        <div class="col">
+
+         <label >
+             Siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+             Casi siempre
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Algunas veces
+
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+           Casi nunca
+         </label>
+            </div>
+        <div class="col">
+
+         <label>
+            Nunca
+         </label>
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>69.- Comunican tarde los asuntos de trabajo </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input"  type="radio" name="p69" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p69"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p69"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p69"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p69"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>70.- Dificultan el logro de los resultados del trabajo </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input"  type="radio" name="p70" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p70"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p70"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p70"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p70"  value="0" >
+
+            </div>
+          </div>
+            <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>71.- Cooperan poco cuando se necesita </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input"  type="radio" name="p71" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p71"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p71"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p71"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p71"  value="0" >
+
+            </div>
+          </div>
+             <div class="row border-bottom border-dark">
+        <div class="col-6">
+        <label>72.- Adoptan las sugerencias para mejorar su trabajo </label>
+    </div>
+        <div class="col">
+         <input class="form-check-input"  type="radio" name="p72" value="4">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p72"  value="3">
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p72"  value="2" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p72"  value="1" >
+
+            </div>
+        <div class="col">
+         <input class="form-check-input" type="radio" name="p72"  value="0" >
+
+            </div>
+          </div>
+
+        </section>
+              <hr>
+        <br>
+            <button  class="btn btn-primary" type="submit">Enviar</button>
+
+      </form>
+
+    </div>
+</body>
+ <!--
+<script type="text/javascript">
+
+    const checks = document.querySelectorAll('#section1 input');
+        const section1 = document.getElementById('section1');
+         const section2 = document.getElementById('section2')
+        const boton = document.getElementById('boton');
+           var todos=0
+        boton.addEventListener('click',function(){
+            checks.forEach((e)=>{
+            if(e.checked){
+              todos = 1;
+                  console.log(e.value)
+            }
+            else{
+             todos = 0;
+            }
+
+        });
+            if(todos){
+            section2.style.display='block';
+            }
+            else{
+            console.log('Rellene todos los Campos')
+            }
+        });
+
+</script>
+-->
+</html>
