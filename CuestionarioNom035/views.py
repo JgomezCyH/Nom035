@@ -58,13 +58,17 @@ def dashborad(request):
     df['d9'] = df['p47'] + df['p48'] + df['p49'] + df['p50'] + df['p51'] + df['p52']
     df['d10'] = df['p55'] + df['p56'] + df['p53'] + df['p54']
     df['c1'] = df['d1']
-    df['c2'] = df['d2']+df['d3']
-    df['c3'] = df['d4']+df['d5']
-    df['c4'] = df['d6']+df['d7']+df['d8']
-    df['c5'] = df['d9']+df['d10']
-    df['Total'] = df['c1'] + df['c2'] + df['c3']+df['c4'] +df['c5']
+    df['c2'] = df['d2'] + df['d3']
+    df['c3'] = df['d4'] + df['d5']
+    df['c4'] = df['d6'] + df['d7'] + df['d8']
+    df['c5'] = df['d9'] + df['d10']
+    df['Total'] = df['c1'] + df['c2'] + df['c3'] + df['c4'] + df['c5']
     df = df.replace({True: 1, False: 0})
-    df['Resultado'] = df['T1'] + df['T2'] + df['T3'] + df['T4'] + df['T5'] + df['T6'] + df['T7'] + df['T8'] + df['T9'] + df['T10'] +df['T11'] + df['T12'] + df['T13'] + df['T14'] + df['T15'] + df['T16'] + df['T17'] + df['T18'] + df['T19'] + df['T20']
 
+    df['Resultado'] = df['T1'] + df['T2'] + df['T3'] + df['T4'] + df['T5'] + df['T6'] + df['T7'] + df['T8'] + df['T9'] + \
+                      df['T10'] + df['T11'] + df['T12'] + df['T13'] + df['T14'] + df['T15'] + df['T16'] + df['T17'] + \
+                      df['T18'] + df['T19'] + df['T20']
+
+    #cdf.to_csv(r'C:\Users\Jose Manuel\Desktop\prueba.csv', index=False)
     return render(request, 'dashboard.html',
                   {'respuestas': respuestas, 'dataframe': df.to_dict('records')})

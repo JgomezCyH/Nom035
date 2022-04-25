@@ -1,0 +1,962 @@
+<table class="table" id="tableTrauma">
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Puesto</th>
+      <th scope="col">Nivel de Estudios</th>
+      <th scope="col">Edad</th>
+      <th scope="col">EstadoCivil</th>
+      <th scope="col">P1</th>
+      <th scope="col">P2</th>
+      <th scope="col">P3</th>
+      <th scope="col">P4</th>
+      <th scope="col">P5</th>
+      <th scope="col">P6</th>
+      <th scope="col">P7</th>
+      <th scope="col">P8</th>
+      <th scope="col">P9</th>
+      <th scope="col">P10</th>
+      <th scope="col">P11</th>
+      <th scope="col">P12</th>
+      <th scope="col">P13</th>
+      <th scope="col">P14</th>
+      <th scope="col">P15</th>
+      <th scope="col">P16</th>
+      <th scope="col">P17</th>
+      <th scope="col">P18</th>
+      <th scope="col">P19</th>
+      <th scope="col">P20</th>
+      <th scope="col">Resultado</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <th scope="row">PRUEBA</th>
+      <td>CUESTIONARIO DE PRUEBA</td>
+      <td>LICENCIATURA</td>
+      <td>32</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">sergio alejandro corrales acevedo</th>
+      <td>operador</td>
+      <td>secundaria</td>
+      <td>35</td>
+      <td>CASADO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">JOSE IGNACIO JARAMILLO PEREZ</th>
+      <td>OPERADOR</td>
+      <td>SECUNDARIA</td>
+      <td>28</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Cristian Armando Rodríguez Rojas</th>
+      <td>operador de producción</td>
+      <td>ingenieria en proceso</td>
+      <td>25</td>
+      <td>UNIÓN LIBRE</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">RAFAEL FERNNDEZ PEÑA</th>
+      <td>AYUDANTE GENERAL</td>
+      <td>SECUNDARIA</td>
+      <td>27</td>
+      <td>UNIÓN LIBRE</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">juan simon zuñiga gobea</th>
+      <td>operador</td>
+      <td>secundaria terminada</td>
+      <td>45</td>
+      <td>CASADO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Victor sanchez ramirez</th>
+      <td>Operador</td>
+      <td>Preparatoria</td>
+      <td>48</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Noelia Perales Rubio</th>
+      <td>auxiliar de maquina</td>
+      <td>Preparatoria</td>
+      <td>19</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">hector jesus olvera</th>
+      <td>poducion</td>
+      <td>secudaria</td>
+      <td>23</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Maria del Rosario Tovar Murillo</th>
+      <td>operador</td>
+      <td>Preparatoria</td>
+      <td>46</td>
+      <td>DIVORCIADO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Myriam cárdenas martinez</th>
+      <td>Operador</td>
+      <td>Secundaria</td>
+      <td>39</td>
+      <td>CASADO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">JOSE IGNACIO JARAMILLO PEREZ</th>
+      <td>OPERADOR</td>
+      <td>SECUNDARIA</td>
+      <td>28</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">SHEILA VANESA MONTOYA CERRATO</th>
+      <td>AYUDANTE GENERAL</td>
+      <td>PREPARATORIA</td>
+      <td>20</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Maria lucia cárdenas salinas</th>
+      <td>Obrero</td>
+      <td>Primaria</td>
+      <td>55</td>
+      <td>VIUDO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Maria del Rocío Barcelona Rubio</th>
+      <td>Ayudante general</td>
+      <td>Carrera técnica</td>
+      <td>34</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Vianey Guadalupe Sanchez Gonzalez</th>
+      <td>Ayudante General</td>
+      <td>Preparatoria</td>
+      <td>18</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">maribel gonzalez ortiz</th>
+      <td>operadora</td>
+      <td>secundaria</td>
+      <td>23</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">liliana hernandez arenas</th>
+      <td>ayudante general</td>
+      <td>secundaria</td>
+      <td>23</td>
+      <td>UNIÓN LIBRE</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">LETICIA OVALLE CERDA</th>
+      <td>AYUDANTE GENERAL</td>
+      <td>PRIMARIA</td>
+      <td>43</td>
+      <td>UNIÓN LIBRE</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">DAMIAN RAMIREZ AGUILAR</th>
+      <td>AUXILIAR DE MAQUINA</td>
+      <td>SECUNDARIA</td>
+      <td>22</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">JUANA MARTINEZ HERNANDEZ</th>
+      <td>AYUDANTE GENERAL</td>
+      <td>SECUNDARIA</td>
+      <td>43</td>
+      <td>CASADO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">ESTELA ISIDRA HERNANDEZ RAMIRES</th>
+      <td>AYUDANTE JENERAL</td>
+      <td>SECUNDARIA</td>
+      <td>55</td>
+      <td>VIUDO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Lizette Castro Carrera</th>
+      <td>Coordinador de SGC</td>
+      <td>Licenciatura</td>
+      <td>32</td>
+      <td>DIVORCIADO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">RAUL ISAAC CONSTANTINO UGALDE</th>
+      <td>AUXILIAR DE CAPACITACION</td>
+      <td>MAESTRIA EN DESARROLLO ORGANIZACIONAL</td>
+      <td>33</td>
+      <td>CASADO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Areli Moran Caballero</th>
+      <td>Auxiliar de Sistema de Gestión de Calidad</td>
+      <td>Ingeniería</td>
+      <td>23</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">KARLA LIZETH GARCIA MELO</th>
+      <td>AUXILIAR DE SEGURIDAD E HIGIENE</td>
+      <td>LICENCIATURA</td>
+      <td>23</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Miguel Grecia Narvaez</th>
+      <td>Practicante</td>
+      <td>Licenciatura.</td>
+      <td>25</td>
+      <td>SOLTERO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+    <tr>
+      <th scope="row">Flor Amanda Lorenzo Pacheco</th>
+      <td>uux administrativo</td>
+      <td>licenciatura</td>
+      <td>29</td>
+      <td>CASADO</td>
+
+        <td>1</td>
+        <td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+        
+        <td style="color:red">ATENCIÓN CLINICA</td>
+        
+    </tr>
+
+    
+  </tbody>
+
+ 
+</table>
