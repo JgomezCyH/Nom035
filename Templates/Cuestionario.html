@@ -1,15 +1,6 @@
-{%load static%}{%load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Encuesta Nom035 Grupo CyH</title>
 
-    <link rel="shortcut icon" type="image/x-icon"  href="{%static 'img/favicon.png'%}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-</head>
-
-<body>
+{% extends 'Base/Base.html' %}
+{% block content %}
 <div class="container my-1">
     <form action="/fin/" method="post" >
         {% csrf_token %}
@@ -48,6 +39,7 @@
 
      </section>
          <hr>
+        <br>
    <section id="section1">
        <label><strong>CUESTIONARIO PARA IDENTIFICAR A LOS TRABAJADORES QUE FUERON SUJETOS A ACONTECIMIENTOS TRAUMÁTICOS SEVEROS</strong></label>
         <label><b>I.- Acontecimiento traumático severo</b></label>
@@ -155,7 +147,7 @@
 
 
         </section>
- <hr>
+        <hr>
         <br>
            <!--  <    <button id="boton" class="btn btn-primary" type="button">Siguiente</button>-->
 
@@ -2886,34 +2878,5 @@
       </form>
 
     </div>
-</body>
- <!--
-<script type="text/javascript">
+ {% endblock %}
 
-    const checks = document.querySelectorAll('#section1 input');
-        const section1 = document.getElementById('section1');
-         const section2 = document.getElementById('section2')
-        const boton = document.getElementById('boton');
-           var todos=0
-        boton.addEventListener('click',function(){
-            checks.forEach((e)=>{
-            if(e.checked){
-              todos = 1;
-                  console.log(e.value)
-            }
-            else{
-             todos = 0;
-            }
-
-        });
-            if(todos){
-            section2.style.display='block';
-            }
-            else{
-            console.log('Rellene todos los Campos')
-            }
-        });
-
-</script>
--->
-</html>

@@ -1,21 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-</head>
-<body>
-<div class="container">
 
-    {{form}}
-<br>
-    {%for pregunta in preguntas%}
-    {{pregunta}}
-
-    <br>
-    {%endfor%}
-
+ {%extends 'Base/Base.html'%}
+ {%block content%}
+<div class="col-6 offset3 mx-auto border bordered rounded shadow-lg p-3 mb-5 bg-white rounded">
+  <div id="formulario" class="col-sm-12 offset-md-1 col-md-10 ">
+     <form class="form-gruop" method="post">
+     {% csrf_token %}
+        {%if  form.error_messages%}
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Advertencia:</strong> {{form.get_invalid_login_error}}
 </div>
-</body>
-</html>
+
+         {%endif%}
+
+        <div  class="col-12 py-4">
+            <p>USUARIO</p>
+          {{form.username}}
+        </div>
+        <div class="col-12 py-1">
+            <p>CONTRASEÑA</p>
+           {{form.password}}
+        </div>
+      <div class="col-12 py-4">
+        <button class="btn btn-success w-100">Iniciar Sesion</button>
+    </div>
+
+
+</form>
+
+        </div>
+             </div>
+ </div>
+ {%endblock%}
