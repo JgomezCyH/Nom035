@@ -1,6 +1,7 @@
 
 {% extends 'Base/Base.html' %}
 {% block content %}
+{{data.form|safe}}
         <div class="row">
             <div class="col-4 offset-4">
                 <h1 class="w-100 my-4">Gracias</h1>
@@ -8,4 +9,5 @@
             </div>
         </div>
     </div>
- {% endblock %}
+
+{% endblock %}

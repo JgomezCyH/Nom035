@@ -69,6 +69,6 @@ def dashborad(request):
                       df['T10'] + df['T11'] + df['T12'] + df['T13'] + df['T14'] + df['T15'] + df['T16'] + df['T17'] + \
                       df['T18'] + df['T19'] + df['T20']
 
-    #cdf.to_csv(r'C:\Users\Jose Manuel\Desktop\prueba.csv', index=False)
+    #df.to_csv(r'C:\Users\Jose Manuel\Desktop\prueba.csv', index=False)
     return render(request, 'dashboard.html',
                   {'respuestas': respuestas, 'dataframe': df.to_dict('records')})
