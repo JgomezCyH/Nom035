@@ -24,7 +24,7 @@ STATIC_DIR = os.path.join(BASE_DIR,"static")
 SECRET_KEY = 'django-insecure-(r0m$6cl0411zjdvs5b^20^cjl=d#q$i7i5*1rp^@5p0-qsg%&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -82,6 +82,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'Nom035.sqlite3',
     }
 }
+
 
 
 # Password validation

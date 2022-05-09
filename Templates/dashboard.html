@@ -21,6 +21,9 @@
   <li class="nav-item" role="presentation">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Eventos Traumaticos</a>
   </li>
+    <li class="nav-item" role="presentation">
+    <a class="nav-link" id="chart-tab" data-toggle="tab" href="#Charts" role="tab" aria-controls="profile" aria-selected="false">Graficas</a>
+  </li>
 
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -359,7 +362,7 @@
       {%if pregunta.c3 < 5 %}
           <td style="background-color:#9BE5F7;color:black;text-align:center;">{{pregunta.c3}}</td>
       {% elif  pregunta.c3 >= 5 and pregunta.c3 < 7  %}
-          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.c3}</td>
+          <td style="background-color:#6BF56E;color:black;text-align:center;">{{pregunta.c3}}</td>
       {% elif  pregunta.c3 >= 7 and pregunta.c3 < 10 %}
           <td style="background-color:#FFFF00;color:black;text-align:center;">{{pregunta.c3}}</td>
       {% elif  pregunta.c3 >= 10 and pregunta.c3 < 13  %}
@@ -488,7 +491,562 @@
 </table>
 
   </div>
+
+     <div class="tab-pane fade show active" id="Charts" role="tabpanel" aria-labelledby="home-tab">
+         <div class="container-fluid">
+             <div class="row">
+                 <p class="h1">Dominios</p>
+             </div>
+         <div class="row my-2 mx-auto">
+
+                <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d1pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Condiciones en el ambiente de trabajo</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d1">
+  Ver Imagen
+</button>
   </div>
+</div>
+                    </div>
+               <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d2pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Carga de trabajo</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d2">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+               <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d3pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Falta de control sobre el trabajo</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d3">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+                <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d4pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Jornada de trabajo</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d4">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+               <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d5pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Interferencia en la relación trabajo-familia</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d5">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+               <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d6pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Liderazgo</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d6">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+              <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d7pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Relaciones en el trabajo</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d7">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+               <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d8pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Violencia</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d8">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+               <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d9pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Reconocimiento del desempeño</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d9">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+              <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{d10pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Insuficiente sentido de pertenencia e, inestabilidad</h5>
+    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#d10">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+  </div>
+                 <div class="row">
+                 <p class="h1">Categorias</p>
+             </div>
+
+
+             <div class="row">
+                 <div class="col">
+    <div class="card m-2" style="width: 18rem;">
+   <img class="card-img-top w-100" src="data:image/png;base64, {{dc1pie|safe}}" alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title">Condiciones en el ambiente de trabajo</h5>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dc1">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+                   <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{dc2pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Condiciones en el ambiente de trabajo</h5>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dc2">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+                   <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{dc3pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Condiciones en el ambiente de trabajo</h5>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dc3">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+                   <div class="col">
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{dc4pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Condiciones en el ambiente de trabajo</h5>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dc4">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+                   <div class="col"  >
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{dc5pie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Condiciones en el ambiente de trabajo</h5>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dc5">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+             </div>
+              <div class="row">
+                 <p class="h1">Total</p>
+             </div>
+              <div class="row">
+                  <div class="col"  >
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{totalNombrepie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Total</h5>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultados">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+                     <div class="col"  >
+<div class="card m-2" style="width: 18rem;">
+  <img class="card-img-top w-100" src="data:image/png;base64, {{resultadoNombrepie|safe}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Eventos Traumaticos</h5>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#traumas">
+  Ver Imagen
+</button>
+  </div>
+</div>
+                    </div>
+             </div>
+           </div>
+</div>
+     </div>
+         </div>
+
+         </div>
+  </div>
+
+<div class="modal fade" id="resultados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{totalNombrepie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="traumas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{resultadoNombrepie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d1pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d2pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d3pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d4pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d5pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d6pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d7pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d8pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="d9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d9pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade w-100" id="d10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{d10pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade w-100" id="dc1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{dc1pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade w-100" id="dc2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{dc2pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade w-100" id="dc3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{dc3pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade w-100" id="dc4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{dc4pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade w-100" id="dc5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="w-100" src="data:image/png;base64, {{dc5pie|safe}}" alt="Card image cap">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 
