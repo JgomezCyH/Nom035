@@ -69,6 +69,13 @@ nivelestudios = [
     [3, "Licenciatura"],
     [4, "PostGrado"]
 ]
+cedis = [
+    [0, "PIQ"],
+    [1, "AGS"],
+    [2, "PARK V"],
+    [3, "SJR"],
+
+]
 
 
 class CuestPregunta(models.Model):
@@ -98,6 +105,7 @@ class Cuestionario72(models.Model):
     Edad = models.IntegerField()
     Puesto = models.CharField(max_length=50)
     Escolaridad = models.CharField(max_length=50)
+    Cedis = models.IntegerField(choices=cedis,default=0)
     T1 = models.BooleanField()
     T2 = models.BooleanField()
     T3 = models.BooleanField()

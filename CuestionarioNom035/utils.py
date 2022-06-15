@@ -15,11 +15,11 @@ def get_graph():
     return graph
 
 
-def get_plot(x, titulo, colors, legends):
+def get_plot(x, titulo, ):
     plt.switch_backend('AGG')
-    plt.figure(figsize=(10, 10))
+    plt.figure(figsize=(6, 6))
     plt.title(titulo)
-    plt.pie(x, colors=colors, autopct='%1.2f%%')
-    plt.legend(legends, loc='best')
+    plt.pie(x, autopct='%1.2f%%', labels=x.index.tolist())
+    plt.legend(loc="best")
     graph = get_graph()
     return graph

@@ -148,85 +148,156 @@ def dashborad(request):
                                 labels=['No Requiere Atencion', 'Requiere Atencion'])
     # df.to_csv(r'C:\Users\Jose Manuel\Desktop\prueba.csv', index=False)
 
-    totalNombrepie = get_plot(df.TotalNombre.value_counts(), "Resultado Final",
-                              colors=['#6BF56E', '#FFFF00', '#9BE5F7', '#FFC000', 'red'],
-                              legends={'Bajo': '#6BF56E', 'Medio': '#FFFF00', 'Nulo': '#9BE5F7', 'Alto': '#FFC000',
-                                       'Muy Alto': 'red'})
-    resultadoNombrepie = get_plot(df.ResultadoNombre.value_counts(), "Resultado Final",
-                              colors=[ '#9BE5F7',  'red'],
-                              legends={'No Requiere Atencion Medica': '#6BF56E',
-                                       'Requiere Atencion Medica': 'red'})
+    filter1 = df["Cedis"] == "PIQ"
+    filter2 = df["Cedis"] == "AGS"
+    filter3 = df["Cedis"] == "PARK V"
+    filter4 = df["Cedis"] == "SJR"
+    totalNombrepie = get_plot(df.TotalNombre.value_counts(), "Resultado Final")
+    resultadoNombrepie = get_plot(df.ResultadoNombre.value_counts(), "Resultado Final")
+    d1pie = get_plot(df.d1Nombre.value_counts(), "Condiciones en el ambiente de trabajo")
+    d2pie = get_plot(df.d2Nombre.value_counts(), "Carga de trabajo")
+    d3pie = get_plot(df.d3Nombre.value_counts(), "Falta de control sobre el trabajo")
+    d4pie = get_plot(df.d4Nombre.value_counts(), "Jornada de trabajo")
+    d5pie = get_plot(df.d5Nombre.value_counts(), "Interferencia en la relación trabajo-familia")
+    d6pie = get_plot(df.d6Nombre.value_counts(), "Liderazgo")
+    d7pie = get_plot(df.d7Nombre.value_counts(), "Relaciones en el trabajo")
+    d8pie = get_plot(df.d8Nombre.value_counts(), "Violencia")
+    d9pie = get_plot(df.d9Nombre.value_counts(), "Reconocimiento del desempeño")
+    d10pie = get_plot(df.d10Nombre.value_counts(), "Insuficiente sentido de pertenencia e, inestabilidad")
+    dc1pie = get_plot(df.c1Nombre.value_counts(), "Ambiente de trabajo")
+    dc2pie = get_plot(df.c2Nombre.value_counts(), "Factores propios de la actividad")
+    dc3pie = get_plot(df.c3Nombre.value_counts(), "Organización del tiempo de trabajo")
+    dc4píe = get_plot(df.c4Nombre.value_counts(), "Liderazgo y relaciones en el trabajo")
+    dc5pie = get_plot(df.c5Nombre.value_counts(), "Entorno organizacional")
+    # Graficas para el PIQ
+    totalNombrePIQpie = get_plot(df.where(filter1).TotalNombre.value_counts(), "Resultado Final")
+    resultadoNombrePIQpie = get_plot(df.where(filter1).ResultadoNombre.value_counts(), "Resultado Final")
+    d1PIQpie = get_plot(df.where(filter1).d1Nombre.value_counts(), "Condiciones en el ambiente de trabajo")
+    d2PIQpie = get_plot(df.where(filter1).d2Nombre.value_counts(), "Carga de trabajo")
+    d3PIQpie = get_plot(df.where(filter1).d3Nombre.value_counts(), "Falta de control sobre el trabajo")
+    d4PIQpie = get_plot(df.where(filter1).d4Nombre.value_counts(), "Jornada de trabajo")
+    d5PIQpie = get_plot(df.where(filter1).d5Nombre.value_counts(), "Interferencia en la relación trabajo-familia")
+    d6PIQpie = get_plot(df.where(filter1).d6Nombre.value_counts(), "Liderazgo")
+    d7PIQpie = get_plot(df.where(filter1).d7Nombre.value_counts(), "Relaciones en el trabajo")
+    d8PIQpie = get_plot(df.where(filter1).d8Nombre.value_counts(), "Violencia")
+    d9PIQpie = get_plot(df.where(filter1).d9Nombre.value_counts(), "Reconocimiento del desempeño")
+    d10PIQpie = get_plot(df.where(filter1).d10Nombre.value_counts(),
+                         "Insuficiente sentido de pertenencia e, inestabilidad")
+    dc1PIQpie = get_plot(df.where(filter1).c1Nombre.value_counts(), "Ambiente de trabajo")
+    dc2PIQpie = get_plot(df.where(filter1).c2Nombre.value_counts(), "Factores propios de la actividad")
+    dc3PIQpie = get_plot(df.where(filter1).c3Nombre.value_counts(), "Organización del tiempo de trabajo")
+    dc4PIQpíe = get_plot(df.where(filter1).c4Nombre.value_counts(), "Liderazgo y relaciones en el trabajo")
+    dc5PIQpie = get_plot(df.where(filter1).c5Nombre.value_counts(), "Entorno organizacional")
 
-    d1pie = get_plot(df.d1Nombre.value_counts(), "Condiciones en el ambiente de trabajo",
-                     colors=['#9BE5F7', '#6BF56E', '#FFFF00', '#FFC000', 'red'],
-                     legends={'Nulo': '#9BE5F7', 'Bajo': '#6BF56E', 'Medio': '#FFFF00', 'Alto': '#FFC000',
-                              'Muy Alto': 'red'})
-    d2pie = get_plot(df.d2Nombre.value_counts(), "Carga de trabajo",
-                     colors=['#FFC000', '#9BE5F7', '#FFFF00', '#6BF56E', 'red'],
-                     legends={'Alto': '#FFC000', 'Nulo': '#9BE5F7', 'Medio': '#FFFF00', 'Bajo': '#6BF56E',
-                              'Muy Alto': 'red'})
-    d3pie = get_plot(df.d3Nombre.value_counts(), "Falta de control sobre el trabajo",
-                     colors=['#9BE5F7', '#6BF56E', '#FFFF00', '#FFC000', 'red'],
-                     legends={'Nulo': '#9BE5F7', 'Bajo': '#6BF56E', 'Medio': '#FFFF00', 'Alto': '#FFC000',
-                              'Muy Alto': 'red'})
-    d4pie = get_plot(df.d4Nombre.value_counts(), "Jornada de trabajo",
-                     colors=['#9BE5F7', '#FFFF00', 'red', '#FFC000', '#6BF56E'],
-                     legends={'Nulo': '#9BE5F7', 'Medio': '#FFFF00', 'Muy Alto': 'red', 'Alto': '#FFC000',
-                              'Bajo': '#6BF56E'})
-    d5pie = get_plot(df.d5Nombre.value_counts(), "Interferencia en la relación trabajo-familia",
-                     colors=['#9BE5F7', '#6BF56E', '#FFFF00', '#FFC000', 'red'],
-                     legends={'Nulo': '#9BE5F7', 'Bajo': '#6BF56E', 'Medio': '#FFFF00', 'Alto': '#FFC000',
-                              'Muy Alto': 'red'})
-    d6pie = get_plot(df.d6Nombre.value_counts(), "Liderazgo",
-                     colors=['#9BE5F7', 'red', '#FFFF00', '#FFC000', '#6BF56E'],
-                     legends={'Nulo': '#9BE5F7', 'Muy Alto': 'red', 'Medio': '#FFFF00', 'Alto': '#FFC000',
-                              'Bajo': '#6BF56E'})
-    d7pie = get_plot(df.d7Nombre.value_counts(), "Relaciones en el trabajo",
-                     colors=['#9BE5F7', '#FFFF00', '#6BF56E', '#FFC000', 'red'],
-                     legends={'Nulo': '#9BE5F7', 'Medio': '#FFFF00', 'Bajo': '#6BF56E', 'Alto': '#FFC000',
-                              'Muy Alto': 'red'})
-    d8pie = get_plot(df.d8Nombre.value_counts(), "Violencia",
-                     colors=['#9BE5F7', '#6BF56E', '#FFFF00', 'red', '#FFC000'],
-                     legends={'Nulo': '#9BE5F7', 'Bajo': '#6BF56E', 'Alto': '#FFFF00', 'Muy Alto': 'red',
-                              'Medio': '#FFC000',
-                              })
-    d9pie = get_plot(df.d9Nombre.value_counts(), "Reconocimiento del desempeño",
-                     colors=['#9BE5F7', '#6BF56E', '#FFFF00', '#FFC000', 'red'],
-                     legends={'Nulo': '#9BE5F7', 'Bajo': '#6BF56E', 'Alto': '#FFFF00',
-                              'Medio': '#FFC000', 'Muy Alto': 'red'
-                              })
-    d10pie = get_plot(df.d10Nombre.value_counts(), "Insuficiente sentido de pertenencia e, inestabilidad",
-                      colors=['#6BF56E', '#9BE5F7', '#FFFF00', '#FFC000', 'red'],
-                      legends={'Bajo': '#6BF56E', 'Nulo': '#9BE5F7', 'Alto': '#FFFF00',
-                               'Medio': '#FFC000', 'Muy Alto': 'red'
-                               })
-    dc1pie = get_plot(df.c1Nombre.value_counts(), "Ambiente de trabajo",
-                      colors=['#9BE5F7', '#6BF56E', '#FFFF00', '#FFC000', 'red'],
-                      legends={'Nulo': '#9BE5F7', 'Bajo': '#6BF56E', 'Medio': '#FFFF00', 'Alto': '#FFC000',
-                               'Muy Alto': 'red'})
+    # Graficas para AGS
+    totalNombreAGSpie = get_plot(df.where(filter2).TotalNombre.value_counts(), "Resultado Final")
+    resultadoNombreAGSpie = get_plot(df.where(filter2).ResultadoNombre.value_counts(), "Resultado Final")
+    d1AGSpie = get_plot(df.where(filter2).d1Nombre.value_counts(), "Condiciones en el ambiente de trabajo")
+    d2AGSpie = get_plot(df.where(filter2).d2Nombre.value_counts(), "Carga de trabajo")
+    d3AGSpie = get_plot(df.where(filter2).d3Nombre.value_counts(), "Falta de control sobre el trabajo")
+    d4AGSpie = get_plot(df.where(filter2).d4Nombre.value_counts(), "Jornada de trabajo")
+    d5AGSpie = get_plot(df.where(filter2).d5Nombre.value_counts(), "Interferencia en la relación trabajo-familia")
+    d6AGSpie = get_plot(df.where(filter2).d6Nombre.value_counts(), "Liderazgo")
+    d7AGSpie = get_plot(df.where(filter2).d7Nombre.value_counts(), "Relaciones en el trabajo")
+    d8AGSpie = get_plot(df.where(filter2).d8Nombre.value_counts(), "Violencia")
+    d9AGSpie = get_plot(df.where(filter2).d9Nombre.value_counts(), "Reconocimiento del desempeño")
+    d10AGSpie = get_plot(df.where(filter2).d10Nombre.value_counts(),
+                         "Insuficiente sentido de pertenencia e, inestabilidad")
+    dc1AGSpie = get_plot(df.where(filter2).c1Nombre.value_counts(), "Ambiente de trabajo")
+    dc2AGSpie = get_plot(df.where(filter2).c2Nombre.value_counts(), "Factores propios de la actividad")
+    dc3AGSpie = get_plot(df.where(filter2).c3Nombre.value_counts(), "Organización del tiempo de trabajo")
+    dc4AGSpíe = get_plot(df.where(filter2).c4Nombre.value_counts(), "Liderazgo y relaciones en el trabajo")
+    dc5AGSpie = get_plot(df.where(filter2).c5Nombre.value_counts(), "Entorno organizacional")
 
-    dc2pie = get_plot(df.c2Nombre.value_counts(), "Factores propios de la actividad",
-                      colors=['#FFFF00', '#6BF56E', '#FFC000', '#9BE5F7', 'red'],
-                      legends={'Medio': '#FFFF00', 'Bajo': '#6BF56E', 'Alto': '#FFC000', 'Nulo': '#9BE5F7',
-                               'Muy Alto': 'red'})
-    dc3pie = get_plot(df.c3Nombre.value_counts(), "Organización del tiempo de trabajo",
-                      colors=['#9BE5F7', '#FFF000', '#6BF56E', '#FFC000', 'red'],
-                      legends={'Nulo': '#9BE5F7', 'Medio': '#FFFF00', 'Bajo': '#6BF56E', 'Alto': '#FFC000',
-                               'Muy Alto': 'red'})
-    dc4íe = get_plot(df.c4Nombre.value_counts(), "Liderazgo y relaciones en el trabajo",
-                     colors=['#9BE5F7', '#6BF56E', '#FFC000', '#FFF000', 'red'],
-                     legends={'Nulo': '#9BE5F7', 'Bajo': '#6BF56E', 'Alto': '#FFC000', 'Medio': '#FFFF00',
-                              'Muy Alto': 'red'})
-    dc5pie = get_plot(df.c5Nombre.value_counts(), "Entorno organizacional",
-                      colors=['#9BE5F7', '#6BF56E', '#FFF000', '#FFC000', 'red'],
-                      legends={'Nulo': '#9BE5F7', 'Bajo': '#6BF56E', 'Medio': '#FFFF00', 'Alto': '#FFC000',
-                               'Muy Alto': 'red'})
+    # Graficas para PARK
+    totalNombrePARKpie = get_plot(df.where(filter2).TotalNombre.value_counts(), "Resultado Final")
+    resultadoNombrePARKpie = get_plot(df.where(filter2).ResultadoNombre.value_counts(), "Resultado Final")
+    d1PARKpie = get_plot(df.where(filter2).d1Nombre.value_counts(), "Condiciones en el ambiente de trabajo")
+    d2PARKpie = get_plot(df.where(filter2).d2Nombre.value_counts(), "Carga de trabajo")
+    d3PARKpie = get_plot(df.where(filter2).d3Nombre.value_counts(), "Falta de control sobre el trabajo")
+    d4PARKpie = get_plot(df.where(filter2).d4Nombre.value_counts(), "Jornada de trabajo")
+    d5PARKpie = get_plot(df.where(filter2).d5Nombre.value_counts(), "Interferencia en la relación trabajo-familia")
+    d6PARKpie = get_plot(df.where(filter2).d6Nombre.value_counts(), "Liderazgo")
+    d7PARKpie = get_plot(df.where(filter2).d7Nombre.value_counts(), "Relaciones en el trabajo")
+    d8PARKpie = get_plot(df.where(filter2).d8Nombre.value_counts(), "Violencia")
+    d9PARKpie = get_plot(df.where(filter2).d9Nombre.value_counts(), "Reconocimiento del desempeño")
+    d10PARKpie = get_plot(df.where(filter2).d10Nombre.value_counts(),
+                          "Insuficiente sentido de pertenencia e, inestabilidad")
+    dc1PARKpie = get_plot(df.where(filter2).c1Nombre.value_counts(), "Ambiente de trabajo")
+    dc2PARKpie = get_plot(df.where(filter2).c2Nombre.value_counts(), "Factores propios de la actividad")
+    dc3PARKpie = get_plot(df.where(filter2).c3Nombre.value_counts(), "Organización del tiempo de trabajo")
+    dc4PARKpíe = get_plot(df.where(filter2).c4Nombre.value_counts(), "Liderazgo y relaciones en el trabajo")
+    dc5PARKpie = get_plot(df.where(filter2).c5Nombre.value_counts(), "Entorno organizacional")
+    # Graficas SJR
+    totalNombreSJRpie = get_plot(df.where(filter2).TotalNombre.value_counts(), "Resultado Final")
+    resultadoNombreSJRpie = get_plot(df.where(filter2).ResultadoNombre.value_counts(), "Resultado Final")
+    d1SJRpie = get_plot(df.where(filter2).d1Nombre.value_counts(), "Condiciones en el ambiente de trabajo")
+    d2SJRpie = get_plot(df.where(filter2).d2Nombre.value_counts(), "Carga de trabajo")
+    d3SJRpie = get_plot(df.where(filter2).d3Nombre.value_counts(), "Falta de control sobre el trabajo")
+    d4SJRpie = get_plot(df.where(filter2).d4Nombre.value_counts(), "Jornada de trabajo")
+    d5SJRpie = get_plot(df.where(filter2).d5Nombre.value_counts(), "Interferencia en la relación trabajo-familia")
+    d6SJRpie = get_plot(df.where(filter2).d6Nombre.value_counts(), "Liderazgo")
+    d7SJRpie = get_plot(df.where(filter2).d7Nombre.value_counts(), "Relaciones en el trabajo")
+    d8SJRpie = get_plot(df.where(filter2).d8Nombre.value_counts(), "Violencia")
+    d9SJRpie = get_plot(df.where(filter2).d9Nombre.value_counts(), "Reconocimiento del desempeño")
+    d10SJRpie = get_plot(df.where(filter2).d10Nombre.value_counts(),
+                         "Insuficiente sentido de pertenencia e, inestabilidad")
+    dc1SJRpie = get_plot(df.where(filter2).c1Nombre.value_counts(), "Ambiente de trabajo")
+    dc2SJRpie = get_plot(df.where(filter2).c2Nombre.value_counts(), "Factores propios de la actividad")
+    dc3SJRpie = get_plot(df.where(filter2).c3Nombre.value_counts(), "Organización del tiempo de trabajo")
+    dc4SJRpíe = get_plot(df.where(filter2).c4Nombre.value_counts(), "Liderazgo y relaciones en el trabajo")
+    dc5SJRpie = get_plot(df.where(filter2).c5Nombre.value_counts(), "Entorno organizacional")
 
     return render(request, 'dashboard.html',
                   {'respuestas': respuestas, 'dataframe': df.to_dict('records'), 'totalNombrepie': totalNombrepie,
-                   'resultadoNombrepie':resultadoNombrepie,
+                   'resultadoNombrepie': resultadoNombrepie,
                    'd1pie': d1pie, 'd2pie': d2pie,
                    'd3pie': d3pie,
                    'd4pie': d4pie, 'd5pie': d5pie, 'd6pie': d6pie, 'd7pie': d7pie, 'd8pie': d8pie,
-                   'd9pie': d9pie, 'd10pie': d10pie, 'dc1pie':dc1pie,'dc2pie':dc2pie,'dc3pie':dc3pie,
-                   'dc4pie':dc4íe,'dc5pie':dc5pie})
+                   'd9pie': d9pie, 'd10pie': d10pie, 'dc1pie': dc1pie, 'dc2pie': dc2pie, 'dc3pie': dc3pie,
+                   'dc4pie': dc4píe, 'dc5pie': dc5pie,
+
+                   # Graficas de piq
+                   'totalNombrePIQpie': totalNombrePIQpie,
+                   'resultadoNombrePIQpie': resultadoNombrePIQpie,
+                   'd1PIQpie': d1PIQpie, 'd2PIQpie': d2PIQpie,
+                   'd3PIQpie': d3PIQpie,
+                   'd4PIQpie': d4PIQpie, 'd5PIQpie': d5PIQpie, 'd6PIQpie': d6PIQpie, 'd7PIQpie': d7PIQpie,
+                   'd8PIQpie': d8PIQpie,
+                   'd9PIQpie': d9PIQpie, 'd10PIQpie': d10PIQpie, 'dc1PIQpie': dc1PIQpie, 'dc2PIQpie': dc2PIQpie,
+                   'dc3PIQpie': dc3PIQpie,
+                   'dc4PIQpie': dc4PIQpíe, 'dc5PIQpie': dc5PIQpie,
+                   # Graficas de aguascalientes
+                   'totalNombreAGSpie': totalNombreAGSpie,
+                   'resultadoNombreAGSpie': resultadoNombreAGSpie,
+                   'd1AGSpie': d1AGSpie, 'd2AGSpie': d2AGSpie,
+                   'd3AGSpie': d3AGSpie,
+                   'd4AGSpie': d4AGSpie, 'd5AGSpie': d5AGSpie, 'd6AGSpie': d6AGSpie, 'd7AGSpie': d7AGSpie,
+                   'd8AGSpie': d8AGSpie,
+                   'd9AGSpie': d9AGSpie, 'd10AGSpie': d10AGSpie, 'dc1AGSpie': dc1AGSpie, 'dc2AGSpie': dc2AGSpie,
+                   'dc3AGSpie': dc3AGSpie,
+                   'dc4AGSpie': dc4AGSpíe, 'dc5AGSpie': dc5AGSpie,
+
+                   # Graficas de PARK V
+                   'totalNombrePARKpie': totalNombrePARKpie,
+                   'resultadoNombrePARKpie': resultadoNombrePARKpie,
+                   'd1PARKpie': d1PARKpie, 'd2PARKpie': d2PARKpie,
+                   'd3PARKpie': d3PARKpie,
+                   'd4PARKpie': d4PARKpie, 'd5PARKpie': d5PARKpie, 'd6PARKpie': d6PARKpie, 'd7PARKpie': d7PARKpie,
+                   'd8PARKpie': d8PARKpie,
+                   'd9PARKpie': d9PARKpie, 'd10PARKpie': d10PARKpie, 'dc1PARKpie': dc1PARKpie, 'dc2PARKpie': dc2PARKpie,
+                   'dc3PARKpie': dc3PARKpie,
+                   'dc4PARKpie': dc4PARKpíe, 'dc5PARKpie': dc5PARKpie,
+
+                   # Graficas de SJR
+                   'totalNombreSJRpie': totalNombreSJRpie,
+                   'resultadoNombreSJRpie': resultadoNombreSJRpie,
+                   'd1SJRpie': d1SJRpie, 'd2SJRpie': d2SJRpie,
+                   'd3SJRpie': d3SJRpie,
+                   'd4SJRpie': d4SJRpie, 'd5SJRpie': d5SJRpie, 'd6SJRpie': d6SJRpie, 'd7SJRpie': d7SJRpie,
+                   'd8SJRpie': d8SJRpie,
+                   'd9SJRpie': d9SJRpie, 'd10SJRpie': d10SJRpie, 'dc1SJRpie': dc1SJRpie, 'dc2SJRpie': dc2SJRpie,
+                   'dc3SJRpie': dc3SJRpie,
+                   'dc4SJRpie': dc4SJRpíe, 'dc5SJRpie': dc5SJRpie
+
+                   })
